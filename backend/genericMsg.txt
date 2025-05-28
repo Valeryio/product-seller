@@ -1,0 +1,11 @@
+
+
+401 - Message : "Authentication required: valid token missing or expired."
+Tu peux le rendre plus personnalisé selon ton contexte. Par exemple :
+
+"Access denied: please provide a valid authentication token."
+ou
+"Unauthorized: your session has expired or your token is invalid."
+
+
+403 - 
