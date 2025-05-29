@@ -53,7 +53,7 @@ const getCard = async (req, res) => {
 		return responseHandlers.errorResponse(
 			res,
 			err
-		)
+		);
 	}
 
 };
@@ -62,7 +62,7 @@ const getCard = async (req, res) => {
  * @function addCard - add a new card in the database
  * @param {*} req - express request object
  * @param {*} res - express response object
- * @returns {void} - An error, or the updated object
+ * @returns {void} - An error, or the created object
  */
 const addCard = async (req, res) => {
 

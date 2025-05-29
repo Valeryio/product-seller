@@ -28,11 +28,12 @@ app.use("/", express.static(path.join(__dirname, "/public")));
 // Configuration of different API for objects
 const userRouter = require("./routes/user.routes");
 const cardRouter = require("./routes/card.routes");
+const productRouter = require("./routes/product.routes");
 
 // API to interact with the users
 app.use("/users", userRouter);
-
 app.use("/cards", cardRouter);
+app.use("/products", productRouter);
 
 
 // start the backend server

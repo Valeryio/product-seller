@@ -2,6 +2,7 @@
 
 const Product = require("../models/product.model");
 
+
 const findById = async (productId) => {
 
 	try {
@@ -15,7 +16,7 @@ const findById = async (productId) => {
 
 const findAll = async () => {
 	try {
-		const result = await product.find();
+		const result = await Product.find();
 		console.log("The docs : ", result);
 		return result;
 	} catch (err) {

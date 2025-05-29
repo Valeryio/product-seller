@@ -7,7 +7,7 @@
 {
 	"name": "admin",
 	"email": "admin@gmail.com",
-	"password": "admin"
+	"password": "Admin12@"
 },
 {
   "name": "fifa",
@@ -38,5 +38,10 @@
   "name": "Linson DOUMATE",
   "email": "gnonaval2.8@gmail.com",
   "password": "Valery28!"
+},
+{
+  "name": "Linson DMT",
+  "email": "linson@gmail.com",
+  "password": "Linson28!"
 }
 ]

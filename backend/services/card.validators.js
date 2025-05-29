@@ -4,7 +4,7 @@ const joi = require("joi");
 
 /**
  * @function validateCard
- * @description - Validate a sent object
+ * @description - Validate a card object
  * @param {*} card - the card object to validate
  * @returns - An error if the validation failed, or the value
  * of the card

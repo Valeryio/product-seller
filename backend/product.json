@@ -1,0 +1,196 @@
+[
+	{
+  "name": "T-shirt en coton bio",
+  "description": "T-shirt unisexe 100% coton bio, doux et résistant.",
+  "category": "Vêtements",
+  "user_id": "68372e6e26b87c8695f55f30",
+  "isPublished": true,
+  "variants": [
+    {
+      "name": "T-shirt Blanc M",
+      "images": [
+        "https://example.com/images/tshirt-blanc-m-1.jpg",
+        "https://example.com/images/tshirt-blanc-m-2.jpg"
+      ],
+      "price": 19.99,
+      "color": "white",
+      "quantity": 10,
+      "weight": 0.2
+    },
+    {
+      "name": "T-shirt Noir L",
+      "images": [
+        "https://example.com/images/tshirt-noir-l-1.jpg"
+      ],
+      "price": 21.99,
+      "color": "black",
+      "quantity": 5,
+      "weight": 0.25
+    }
+  ]
+},
+{
+  "name": "Sac à dos étanche",
+  "description": "Sac à dos résistant à l'eau, idéal pour la randonnée et les trajets quotidiens.",
+  "category": "Accessoires",
+  "user_id": "68372e6e26b87c8695f55f30",
+  "variants": [
+    {
+      "name": "Sac noir 30L",
+      "images": [
+        "https://example.com/images/sac-noir.jpg"
+      ],
+      "price": 49.99,
+      "color": "black",
+      "quantity": 20
+    }
+  ]
+},
+{
+  "name": "Lampe de bureau LED",
+  "description": "Lampe LED avec bras articulé et variateur d'intensité.",
+  "category": "Électronique",
+  "user_id": "68372e6e26b87c8695f55f30",
+  "isPublished": false,
+  "variants": [
+    {
+      "name": "Lampe blanche",
+      "images": [
+        "https://example.com/images/lampe-blanche.jpg"
+      ],
+      "price": 34.5,
+      "color": "white",
+      "quantity": 15
+    },
+    {
+      "name": "Lampe grise",
+      "images": [
+        "https://example.com/images/lampe-grise.jpg"
+      ],
+      "price": 34.5,
+      "color": "gray",
+      "quantity": 10,
+      "weight": 0.6
+    }
+  ]
+},
+{
+    "name": "Sweat à capuche unisexe",
+    "description": "Sweat confortable avec doublure polaire, parfait pour l’hiver.",
+    "category": "Vêtements",
+    "user_id": "66372e6e26b87c8695f55f30",
+    "isPublished": true,
+    "variants": [
+      {
+        "name": "Sweat Gris M",
+        "images": ["https://example.com/sweat-gris-m.jpg"],
+        "price": 120,
+        "color": "gray",
+        "quantity": 15,
+        "weight": 0.5
+      },
+      {
+        "name": "Sweat Bleu L",
+        "images": ["https://example.com/sweat-bleu-l.jpg"],
+        "price": 125,
+        "color": "blue",
+        "quantity": 10,
+        "weight": 0.55
+      }
+    ]
+  },
+  {
+    "name": "Casquette Classique",
+    "description": "Casquette légère et respirante pour l’été.",
+    "category": "Accessoires",
+    "user_id": "66372e6e26b87c8695f55f30",
+    "isPublished": true,
+    "variants": [
+      {
+        "name": "Casquette Noire",
+        "images": ["https://example.com/casquette-noire.jpg"],
+        "price": 35,
+        "color": "black",
+        "quantity": 30,
+        "weight": 0.15
+      }
+    ]
+  },
+  {
+    "name": "Chaussures de sport légères",
+    "description": "Parfaites pour la course à pied ou la marche.",
+    "category": "Chaussures",
+    "user_id": "66372e6e26b87c8695f55f30",
+    "isPublished": false,
+    "variants": [
+      {
+        "name": "Chaussures Bleues 42",
+        "images": ["https://example.com/shoes-blue-42.jpg"],
+        "price": 200,
+        "color": "blue",
+        "quantity": 20,
+        "weight": 0.8
+      },
+      {
+        "name": "Chaussures Grises 44",
+        "images": ["https://example.com/shoes-grey-44.jpg"],
+        "price": 200,
+        "color": "gray",
+        "quantity": 5,
+        "weight": 0.85
+      }
+    ]
+  },
+  {
+    "name": "Montre digitale étanche",
+    "description": "Montre avec écran LED et bracelet en silicone, résistante à l’eau.",
+    "category": "Électronique",
+    "user_id": "66372e6e26b87c8695f55f30",
+    "isPublished": true,
+    "variants": [
+      {
+        "name": "Montre Noire",
+        "images": ["https://example.com/montre-noire.jpg"],
+        "price": 90,
+        "color": "black",
+        "quantity": 25,
+        "weight": 0.12
+      },
+      {
+        "name": "Montre Rouge",
+        "images": ["https://example.com/montre-rouge.jpg"],
+        "price": 95,
+        "color": "red",
+        "quantity": 20,
+        "weight": 0.12
+      }
+    ]
+  },
+  {
+    "name": "Sac à dos urbain",
+    "description": "Sac à dos imperméable avec plusieurs compartiments.",
+    "category": "Bagagerie",
+    "user_id": "66372e6e26b87c8695f55f30",
+    "isPublished": false,
+    "variants": [
+      {
+        "name": "Sac Gris 20L",
+        "images": ["https://example.com/sac-gris-20l.jpg"],
+        "price": 75,
+        "color": "gray",
+        "quantity": 12,
+        "weight": 0.9
+      },
+      {
+        "name": "Sac Noir 25L",
+        "images": ["https://example.com/sac-noir-25l.jpg"],
+        "price": 80,
+        "color": "black",
+        "quantity": 8,
+        "weight": 1.1
+      }
+    ]
+  }
+
+
+]
