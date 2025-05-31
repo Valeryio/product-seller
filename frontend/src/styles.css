@@ -1,0 +1,38 @@
+
+@import "tailwindcss";
+
+@theme {
+
+	/* Custom colors properties added to tailwind*/
+	--color-primary-purple: #6A64F6;
+	--color-darkest-purple: #080721;
+	--color-dark-purple: #272556;
+	--color-medium-purple: #9291B6;
+	--color-light-purple: #B2AFE9;
+	--color-lightest-purple: #F0F0FA;
+
+	--color-primary-red: #CC3229;
+	--color-primary-green: #078C64;
+	--font-sans: Roboto, ui-sans-serif, system-ui, sans-serif, "Segoe UI Symbol";
+
+	--text-h1: 40px;
+	--text-h2: 32px;
+	--text-h3: ;
+	--text-h4: ;
+	--text-h5: 24px;
+	--text-h6: 20px;
+	--text-p: 18px;
+	--text-input: 0.9rem;
+	--text-input-error: 0.8rem;
+	--text-tagline: 16px;
+
+	--radius-9x: 9px;
+	--radius-16x: 16px;
+  
+}
+
+.step-loader
+{
+	/* border: 1px solid red; */
+	/* transition: width 1px ease-in; */
+}
