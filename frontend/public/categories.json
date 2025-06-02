@@ -1,0 +1,17 @@
+[
+  { "value": "fashion", "label": "Mode & Vêtements" },
+  { "value": "electronics", "label": "Électronique & Gadgets" },
+  { "value": "beauty", "label": "Beauté & Soins" },
+  { "value": "home", "label": "Maison & Décoration" },
+  { "value": "food", "label": "Alimentation & Boissons" },
+  { "value": "books", "label": "Livres & Papeterie" },
+  { "value": "toys", "label": "Jouets & Jeux" },
+  { "value": "sports", "label": "Sport & Fitness" },
+  { "value": "health", "label": "Santé & Bien-être" },
+  { "value": "phones", "label": "Téléphones & Accessoires" },
+  { "value": "computing", "label": "Informatique & Bureau" },
+  { "value": "automotive", "label": "Auto & Moto" },
+  { "value": "babies", "label": "Bébés & Enfants" },
+  { "value": "art", "label": "Art & Artisanat" },
+  { "value": "others", "label": "Autres Produits" }
+]

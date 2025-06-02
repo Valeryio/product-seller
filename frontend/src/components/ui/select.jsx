@@ -1,15 +1,10 @@
 
 import { useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router";
 
 
-let allCountries;
-try {
-	allCountries = await fetch("/countries.json");
-	allCountries = await allCountries.json();
-} catch (err) {
-	console.log(err);
-}
+let allData;
 
 const FormSelect = ({
 	name,
@@ -20,8 +15,30 @@ const FormSelect = ({
 	SelectType,
 	errorMessage,
 	required=false,
-	placeholder=""
+	placeholder="Selectionnez un pays",
+	filepath = "./countries.json"
 }) => {
+
+	const [allData, setAllData] = useState([]);
+
+	useEffect( () => {
+
+		const fetchData = async () => {
+			try {
+				let data = await fetch(filepath);
+				data = await data.json();
+
+				setAllData(data)
+
+				console.log("all data : ", allData);
+			} catch (err) {
+				console.log(err);
+			}
+		}
+
+		fetchData();
+
+	}, [filepath])
 
 	let borderStyle = "border-gray-300";
 	// const [updatedType, setUpdatedType] = useState(SelectType);
@@ -46,13 +63,13 @@ const FormSelect = ({
 
 			<div className={`flex border rounded-[.25rem] px-[.8rem] py-[.5rem]`}>
 
-				<select name={name} id={name} onChange={onChange} value={formData.country}
+				<select name={name} id={name} onChange={onChange} value={formData.value}
 				className={`outline-none  w-full`} >
-					<option >Selectionnez un pays</option>
+					<option >{placeholder}</option>
 					{
-						allCountries.map(countryObj => (
-							<option value={countryObj.country} key={countryObj.countryCode}>
-								{countryObj.country}
+						allData.map(dataObj => (
+							<option value={dataObj.label} key={dataObj.value}>
+								{dataObj.label}
 							</option>
 						))
 					}

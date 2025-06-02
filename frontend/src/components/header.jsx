@@ -7,7 +7,7 @@ const PrimaryHeader = () => {
         <header className=" m-auto max-w-[88rem] flex justify-between items-center py-[1rem] px-[6rem] border border-light-purple " >
             <div className="flex items-center gap-[2rem]">
                 <Link to="/" className="w-[8rem]">
-                    <img src="./logo.svg" alt="" />
+                    <img src="../logo.svg" alt="" />
                 </Link>
                 <nav className="">
                     <ul className="flex items-center gap-[1rem]">

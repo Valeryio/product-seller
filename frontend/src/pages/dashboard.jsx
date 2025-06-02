@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import Sidebar from "../components/sidebar";
 import LogedHome from "./logedHome";
 import Button from "../components/ui/button";
-import ModifyCard from "./modifyCard";
+import AddProduct from "./addProduct";
 import FieldInfoButton from "../components/ui/fieldInfoButton";
 
 const Dashboard = () => {
@@ -19,9 +19,7 @@ const Dashboard = () => {
 					<Header type="secondary" />
 
 					{/* <LogedHome /> */}
-
-					<ModifyCard />
-
+					<AddProduct />
 
 				</div>
 			</div>

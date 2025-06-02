@@ -16,7 +16,9 @@ const Sidebar = () => {
 						<li className="">
 							<Link className="flex gap-[1rem]">
 								<img src="./icons/home.svg" alt="" />
-								<p>Accueil</p>
+								<p className=" hover:font-bold hover:text-primary-purple" >
+									Accueil
+								</p>
 							</Link>
 						</li>
 						{/* <li className="">
@@ -28,7 +30,9 @@ const Sidebar = () => {
 						<li className="">
 							<Link className="flex gap-[1rem]">
 								<img src="./icons/layer.svg" alt="" />
-								<p>Cards</p>
+								<p className=" hover:font-bold hover:text-primary-purple" >
+									Produits
+								</p>
 							</Link>
 						</li>
 					</ul>
@@ -41,13 +45,17 @@ const Sidebar = () => {
 					<li className="">
 						<Link className="flex gap-[1rem]">
 							<img src="./icons/help-circle.svg" alt="" />
-							<p>Support</p>
+							<p className=" hover:font-bold hover:text-primary-purple" >
+								Support
+							</p>
 						</Link>
 					</li>
 					<li className="">
 						<Link className="flex gap-[1rem]">
 							<img src="./icons/settings.svg" alt="" />
-							<p>Settings</p>
+							<p className=" hover:font-bold hover:text-primary-purple" >
+								Paramètres
+							</p>
 						</Link>
 					</li>
 				</ul>

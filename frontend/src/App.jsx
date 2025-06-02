@@ -9,7 +9,7 @@ import Profil from './pages/profil';
 import About from './pages/about';
 import Contact from './pages/contact';
 import Dashboard from './pages/dashboard';
-import SuccessfulLogin from './pages/successfulLogin';
+import SuccessfulRegistration from './pages/successfulRegistration';
 import SuccessfulResetPassword from './pages/successfulResetPassword';
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
             <Route path='/profil' element={<Profil />} ></Route>
             <Route path='/register' element={<Register />} ></Route>
             <Route path='/dashboard' element={<Dashboard />} ></Route>
+            <Route path='/register/success' element={<SuccessfulRegistration />} />
             <Route path='/ra' element={<SuccessfulResetPassword />} ></Route>
           </Routes>
       </BrowserRouter>

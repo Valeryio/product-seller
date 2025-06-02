@@ -7,6 +7,7 @@ import FormInput from "../components/ui/input";
 import { Link, useNavigate } from "react-router";
 import StepLoader from "../components/stepLoader";
 import FormSelect from "../components/ui/select";
+import Alert from "../components/ui/alert";
 import inputValidators from "../components/helpers/validators";
 
 
@@ -222,7 +223,7 @@ const Register = () => {
 		console.log("We have : ", e.target.name);
 
 		console.log("This is the formData : ", formData);
-	}
+	};
 
 	const handleSelect = (e) => {
 		
@@ -232,7 +233,7 @@ const Register = () => {
 			[name]: value
 		});
 		console.log("This is the select formData : ", formData);
-	}
+	};
 
 
 	const handleSubmit = async (e) => {
@@ -259,8 +260,12 @@ const Register = () => {
 				}
 			);
 	
-			response = await response.json();
-			console.log("The response : ", response);
+			if (response.status === 200) {
+				response = await response.json();
+				console.log("The response : ", response, "\n The status : ", response.status);
+				navigate("/register/success");
+			}
+
 		} catch(err) {
 			console.log(`Error while registering the new user : ${err}`);
 			return (`Error while registering the new user : ${err}`);

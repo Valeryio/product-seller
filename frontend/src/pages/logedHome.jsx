@@ -12,7 +12,7 @@ const LogedHome = () => {
 					</span>
 				</p>
 
-				<Button addIcon={true} imgSrc={"./icons/list-plus.svg"} >Ajouter une nouvelle carte</Button>
+				<Button addIcon={true} imgSrc={"./icons/list-plus.svg"} >Ajouter un nouveau produit</Button>
 			</div>
 
 			<div className=" h-[32rem] bg-lightest-purple">

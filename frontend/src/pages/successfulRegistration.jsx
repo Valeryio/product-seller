@@ -3,7 +3,7 @@
 import Header from "../components/header";
 
 
-const SuccessfulLogin = () => {
+const SuccessfulRegistration = () => {
 
 	return (
 		<>
@@ -23,8 +23,8 @@ const SuccessfulLogin = () => {
 					</p>
 				</div>
 					
-				<picture className=" w-[24rem]" >
-					<img src="./images/successful_registration.png" alt="" />
+				<picture className="" >
+					<img src="../images/8.png" alt="" />
 				</picture>
 
 			</section>
@@ -33,4 +33,4 @@ const SuccessfulLogin = () => {
 	)
 };
 
-export default SuccessfulLogin;
+export default SuccessfulRegistration;
