@@ -38,8 +38,15 @@ const productSchema = mongoose.Schema({
 		type: String,
 		required: true
 	},
+	image: {
+		type: String
+	},
 	category: {
 		type: String,
+		required: true
+	},
+	price: {
+		type: Number,
 		required: true
 	},
 	user_id: {

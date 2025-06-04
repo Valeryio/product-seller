@@ -11,8 +11,13 @@ const findById = async (cardId) => {
 	}
 };
 
-const findAll = async () => {
+const findAll = async (userId) => {
 	try {
+
+		if (userId) {
+			console.log(userId);
+		}
+
 		const result = await Card.find();
 		console.log("The docs : ", result);
 		return result;

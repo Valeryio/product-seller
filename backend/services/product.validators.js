@@ -22,6 +22,8 @@ const variantValidationSchema = joi.object({
 
 const productValidationSchema = joi.object({
 	name: joi.string().required(),
+	image: joi.string(),
+	price: joi.number().required(),
 	description: joi.string().required(),
 	category: joi.string().required(),
 	user_id: joi.string().required(),

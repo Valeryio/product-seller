@@ -14,11 +14,18 @@ const findById = async (productId) => {
 	}
 };
 
-const findAll = async () => {
+const findAll = async (userId) => {
 	try {
-		const result = await Product.find();
-		console.log("The docs : ", result);
-		return result;
+		
+		if (userId) {
+			const result = await Product.find({user_id: userId});
+			console.log("The doc :", result);
+			return result;
+		} else {
+			const result = await Product.find();
+			console.log("The docs : ", result);
+			return result;
+		}
 	} catch (err) {
 		throw new Error(err.message);
 	}

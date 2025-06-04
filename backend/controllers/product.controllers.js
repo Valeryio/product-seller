@@ -4,6 +4,7 @@ const services = require("../services/product.services");
 const responseHandlers = require("../utils/response.helper");
 const validators = require("../services/product.validators");
 
+
 /**
  * @function addProduct
  * @description Add a new product in the database
@@ -13,6 +14,7 @@ const validators = require("../services/product.validators");
  */
 const addProduct = (req, res) => {
 
+	console.log("We are going to save it : ", req.body);
 	const {error, value} = validators.validateProduct(req.body);
 
 	if (error) {
@@ -66,6 +68,26 @@ const getAllProducts = async (req, res) => {
 		);
 	}
 };
+
+const getUsersAllProducts = async (req, res) => {
+
+	const userId = req.params.id;
+	try {
+		const products = await services.findAll(userId);
+		return responseHandlers.successResponse(
+			res,
+			"Products retrieved successfully",
+			products
+		);
+	} catch (err) {
+		console.error(`Error while fetching all the products : ${err.message}`);
+		return responseHandlers.errorResponse(
+			res,
+			err,
+		);
+	}
+};
+
 
 /**
  * @function getProduct
@@ -188,4 +210,4 @@ const removeProduct = async (req, res) => {
 };
 
 
-module.exports = {addProduct, getAllProducts, getProduct, updateProduct, removeProduct};
+module.exports = {addProduct, getAllProducts, getUsersAllProducts, getProduct, updateProduct, removeProduct};
