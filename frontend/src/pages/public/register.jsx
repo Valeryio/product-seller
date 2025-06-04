@@ -1,14 +1,14 @@
 
 
 import { useEffect, useState } from "react";
-import Header from "../components/header";
-import Button from "../components/ui/button";
-import FormInput from "../components/ui/input";
+import Header from "../../components/header";
+import Button from "../../components/ui/button";
+import FormInput from "../../components/ui/input";
 import { Link, useNavigate } from "react-router";
-import StepLoader from "../components/stepLoader";
-import FormSelect from "../components/ui/select";
-import Alert from "../components/ui/alert";
-import inputValidators from "../components/helpers/validators";
+import StepLoader from "../../components/stepLoader";
+import FormSelect from "../../components/ui/select";
+import Alert from "../../components/ui/alert";
+import inputValidators from "../../components/helpers/validators";
 
 
 
@@ -18,7 +18,7 @@ const RegisterFirstStep = ({formData, validated, handleChange, errorMessages}) =
 		<>
 			<StepLoader />
 
-			<div className="border border-gray-200  flex flex-col gap-[1rem] w-[20rem]">
+			<div className="  flex flex-col gap-[1rem] w-[20rem]">
 				<div className="flex flex-col gap-[.5rem]">
 					<h2 className="font-bold text-[27px]">
 						Commençons avec votre nom et votre mail !
@@ -46,7 +46,7 @@ const RegisterSecondStep = ({formData, validated, handleChange, errorMessages}) 
 	return (
 		<>
 			<StepLoader step={2} />
-			<div className="border border-gray-200  flex flex-col gap-[1rem] w-[20rem]">
+			<div className=" flex flex-col gap-[1rem] w-[20rem]">
 
 			<div className="flex flex-col gap-[.5rem]">
 				<h2 className="font-bold text-[27px]">
@@ -76,7 +76,7 @@ const RegisterThirdStep = ({formData, validated, errorMessages, handleChange, ha
 	return (
 		<>
 			<StepLoader step={3} />
-			<div className="border border-gray-200  flex flex-col gap-[1rem] w-[20rem]">
+			<div className="flex flex-col gap-[1rem] w-[20rem]">
 				<div className="flex flex-col gap-[.5rem]">
 					<h2 className="font-bold text-[27px]">
 						Comment vous joindre ?
@@ -280,9 +280,9 @@ const Register = () => {
 		<>
 			<Header type="secondary" />
 
-			<section className=" p-[2rem] flex border justify-center gap-[2rem]" >
+			<section className=" p-[2rem] flex  justify-center gap-[2rem]" >
 
-			<form action=""className="border border-gray-200  flex flex-col gap-[1rem]
+			<form action=""className="hover:shadow-lg border border-lightest-purple rounded-[8px]  flex flex-col gap-[1rem]
 			p-[2rem]">
 
 				<StepComponent formData={formData} errorMessages={errorMessages} handleSelect={handleSelect} validated={validated} handleChange={handleChange} />

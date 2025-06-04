@@ -2,15 +2,16 @@ import { useState } from 'react';
 import {BrowserRouter, Routes, Route} from "react-router";
 import Header from './components/header';
 import Footer from "./components/footer";
-import Register from './pages/register';
-import Login from './pages/login';
-import Home from './pages/home';
+import Register from './pages/public/register';
+import Login from './pages/public/login';
+import Home from './pages/public/home';
 import Profil from './pages/profil';
-import About from './pages/about';
-import Contact from './pages/contact';
+import About from './pages/public/about';
+import Contact from './pages/public/contact';
 import Dashboard from './pages/dashboard';
-import SuccessfulRegistration from './pages/successfulRegistration';
-import SuccessfulResetPassword from './pages/successfulResetPassword';
+import SuccessfulRegistration from './pages/public/successfulRegistration';
+import SuccessfulResetPassword from './pages/public/successfulResetPassword';
+import ProductPage from './pages/productPage';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
             <Route path='/profil' element={<Profil />} ></Route>
             <Route path='/register' element={<Register />} ></Route>
             <Route path='/dashboard' element={<Dashboard />} ></Route>
+            <Route path='/dashboard/products' element={<ProductPage />} ></Route>
             <Route path='/register/success' element={<SuccessfulRegistration />} />
             <Route path='/ra' element={<SuccessfulResetPassword />} ></Route>
           </Routes>

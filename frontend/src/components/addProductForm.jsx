@@ -1,5 +1,6 @@
 
 
+
 import { Link, useNavigate } from "react-router";
 import FormInput from "../components/ui/input";
 import FormSelect from "../components/ui/select";
@@ -10,8 +11,7 @@ import Button from "../components/ui/button";
 import inputValidators from "../components/helpers/validators";
 
 
-const AddProduct = () => {
-
+const AddProductForm = () => {
 
 	const navigate = useNavigate();
 	const [file, setFile] = useState("");
@@ -22,7 +22,8 @@ const AddProduct = () => {
 	const [formData, setFormData] = useState({
 		name: "",
 		description: "",
-		category: ""
+		category: "",
+		price: ""
 	});
 
 
@@ -65,22 +66,21 @@ const AddProduct = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
+		let user = localStorage.getItem("data");
+		user = JSON.parse(user);
+
 		const uniqSuffix = Date.now() + "-" + Math.round(Math.random())
 		const formPayload = new FormData();
 		formPayload.append("name", formData.name);
-		formPayload.append("user_id", "66372e6e26b87c8695f55f30");
+		formPayload.append("user_id", user.id);
 		formPayload.append("description", formData.description);
 		formPayload.append("category", formData.category);
+		formPayload.append("price", formData.price);
 	
 		if (file) {
 			formPayload.append("file", file);
+			console.log(file)
 		}
-
-		for (const [key, value] of formPayload.entries()) {
-			console.log(`${key}: ${value}`);
-		}
-
-		console.log("This is the formPayload : ", JSON.stringify(formPayload));
 
 		try {
 			let response = await fetch("http://localhost:8080/products/add", {
@@ -89,16 +89,11 @@ const AddProduct = () => {
 				credentials: "include"
 			});
 
-			const token = response.headers["token"];
-			console.log(response.headers["Authorization"]);
-
 			response = await response.json();
 			console.log(response);
-
-			// navigate("/dashboard");
+			navigate("/app/products");
 
 		} catch (err) {
-
 			// console.error(`Error while getting the user : ${err}`);
 			return err;
 		}
@@ -114,39 +109,73 @@ const AddProduct = () => {
 	return (
 		<>
 
-			<section className=" p-[2rem] gap-[2rem] flex border " >
+			<section className=" bg-white p-[.5rem] gap-[2rem] flex " >
 
-				<form action="" className="w-full border border-lightest-purple flex flex-col gap-[1rem] 
-				 p-[1rem] rounded-[8px] ">
+				<form action="" className="bg-white w-[24rem] max-h-[36rem] border-lightest-purple flex flex-col gap-[1rem] 
+				px-[1.5rem] pt-[2rem] pb-[4rem] rounded-[8px] overflow-y-auto">
 
-					<div className=" max-w-[24rem] flex flex-col gap-[1rem] px-[2rem] p-[1rem] rounded-[8px]">
+					<div className="  flex flex-col gap-[1rem] ">
 						<div className="flex flex-col gap-[.5rem]">
 							<h2 className="font-semibold text-[32px]">
 								Ajouter un produit
 							</h2>
 							<p className=" text-[15px] font-medium">
-								Ajouter un nouveau produit
+								Enregistrez les différentes informations relatives à votre produit
+								et passez à la suite !
 							</p>
 						</div>
 
 						<FormInput inputType="text" label="Nom" required={true} name="name"
 						onChange={handleChange} value={formData.name} extralabel="" />
 						
-						{ <FormInput inputType="text" label="Description" required={true} name="description"
-						onChange={handleChange} value={formData.description} extralabel="" /> }
+						<FormInput inputType="text" label="Description" required={true} name="description"
+						onChange={handleChange} value={formData.description} extralabel="" />
+
+						<FormInput inputType="number" label="Prix du produit" required={true} name="price"
+						onChange={handleChange} value={formData.price} extralabel="" />
 						
 						<FormSelect label={"Quel est la catégorie du produit ?"} name="category" 
 						formData={formData} placeholder="Selectionnez une catégorie" 
-						onChange={handleSelect} required={true} filepath="./categories.json" />
+						onChange={handleSelect} required={true} filepath="../../categories.json" />
 
-						<input type="file" name="imgFile" onChange={handleImgChange} 
-						className="border"/>
+						<div className="flex flex-col gap-[.25rem]">
+							<div className="flex justify-between">
+								<label htmlFor="file" className="text-input font-medium" >
+									Ajouter une image de votre produit
+									<span className="text-primary-red"> * </span>
+								</label>
+							</div>
 
+							<div className={`flex border rounded-[.25rem] px-[.8rem] py-[.5rem]`}>
+
+							<input type="file" name="imgFile" onChange={handleImgChange} id="file"
+							className="cursor-pointer file:mr-5 file:py-1 file:px-3 file:border-[1px]
+  						file:text-xs file:font-medium file:bg-stone-50 hover:file:cursor-pointer
+						hover:file:bg-blue-50 hover:file:text-primary-purple file:rounded-sm"/>
+							</div>
+						</div>
 					</div>
-					
 					<Button size="large" type="submit" onClick={handleSubmit} onSubmit={handleSubmit} >Enregistrer</Button>
-
 				</form>
+
+				<div className="flex flex-col items-center gap-[1rem] p-[2rem]" >
+
+					<h2 className="text-[1rem]" >
+						Image Produit
+					</h2>
+
+					<picture  className="border p-[2rem] w-[650px] h-[450px] rounded-9x border-lightest-purple ">
+						<img src={
+							file.name ?
+							URL.createObjectURL(file)
+						:
+						"https://placehold.co/600x400"
+						} alt="" className="object-cover w-full h-full" />
+					</picture>
+				</div>
+				
+				
+
 
 			</section>
 		</>
@@ -155,4 +184,4 @@ const AddProduct = () => {
 
 };
 
-export default AddProduct;
+export default AddProductForm;

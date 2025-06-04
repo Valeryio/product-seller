@@ -1,11 +1,11 @@
 
 import { Link, useNavigate } from "react-router";
-import FormInput from "../components/ui/input";
-import Header from "../components/header";
+import FormInput from "../../components/ui/input";
+import Header from "../../components/header";
 import { useState, useEffect } from "react";
-import Button from "../components/ui/button";
-import inputValidators from "../components/helpers/validators";
-import Alert from "../components/ui/alert";
+import Button from "../../components/ui/button";
+import inputValidators from "../../components/helpers/validators";
+import Alert from "../../components/ui/alert";
 
 
 /**
@@ -127,13 +127,14 @@ const Login = () => {
 				credentials: "include"
 			});
 
-			const token = response.headers["token"];
-			console.log(response.headers["Authorization"]);
-
 			response = await response.json();
 			console.log(response);
-
-			navigate("/dashboard");
+			
+			// Saving the data of the user in the localstorage
+      localStorage.setItem("data", JSON.stringify(response.data));
+      console.log("This is the result", response.data);
+		
+			navigate("/app/home");
 
 		} catch (err) {
 

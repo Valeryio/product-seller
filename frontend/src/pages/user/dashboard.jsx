@@ -1,12 +1,10 @@
 
 
-import Header from "../components/header";
+import Header from "../../components/header";
 import { Link } from "react-router";
-import Sidebar from "../components/sidebar";
-import LogedHome from "./logedHome";
-import Button from "../components/ui/button";
-import AddProduct from "./addProduct";
-import FieldInfoButton from "../components/ui/fieldInfoButton";
+import Sidebar from "../../components/sidebar";
+import LogedHome from "../logedHome";
+import ProductPage from "./productPage";
 
 const Dashboard = () => {
 	return (
@@ -19,7 +17,8 @@ const Dashboard = () => {
 					<Header type="secondary" />
 
 					{/* <LogedHome /> */}
-					<AddProduct />
+					{<ProductPage />}
+					
 
 				</div>
 			</div>

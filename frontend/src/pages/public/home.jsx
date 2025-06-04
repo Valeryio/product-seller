@@ -1,9 +1,9 @@
 
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 import { Link } from "react-router";
-import Alert from "../components/ui/alert";
-import Button from "../components/ui/button";
+import Alert from "../../components/ui/alert";
+import Button from "../../components/ui/button";
 
 const Home = () => {
 	return (
