@@ -128,6 +128,8 @@ const login = async (req, res) => {
 		);
 	}
 
+	console.log("We got it");
+
 	// Verify if the user exist
 	const existingUser = await services.findUserByEmail(value.email);
 	if (!existingUser) {
@@ -143,7 +145,7 @@ const login = async (req, res) => {
 	});
 	res.header("Authorization", `Bearer ${token}`);
 
-	// console.log(header["header"]);
+	console.log(header["header"]);
 
 
 	// Storing the token into cookie parser
@@ -160,6 +162,8 @@ const login = async (req, res) => {
 		email: existingUser.email,
 		role: existingUser.role
 	};
+
+	console.log("We'll sent the response");
 
 	return responseHandlers.successResponse(
 		res,
