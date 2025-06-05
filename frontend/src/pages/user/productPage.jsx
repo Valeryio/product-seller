@@ -15,7 +15,7 @@ const ProductPage = ({data}) => {
 		console.log(user);
 
 		const fetchProducts = async () => {
-			let allData = await fetch(`http://localhost:8080/products/user/${user.id}`);
+			let allData = await fetch(`http://${import.meta.env.VITE_BACKEND_API}/products/user/${user.id}`);
 			allData = await allData.json();
 
 			setAllProducts(allData.data);

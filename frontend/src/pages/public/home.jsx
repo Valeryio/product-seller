@@ -16,7 +16,7 @@ const Home = () => {
 				<h1 className="text-h1 font-bold">
 					Créez des pages de vente, encaissez, et suivez vos clients sur 
 					<span className="ml-[1rem] text-green-600"> 
-						WhatsApp! 
+						WhatsApp!
 					</span>
 				</h1>
 				<p className="text-p font-regular">

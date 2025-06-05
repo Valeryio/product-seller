@@ -250,7 +250,7 @@ const Register = () => {
 		console.log("This is the formData : ", formData);
 
 		try {
-			let response = await fetch("http://localhost:8080/users/register",
+			let response = await fetch(`http://${import.meta.env.VITE_BACKEND_API}/users/register`,
 				{
 					method: "POST",
 					headers: {

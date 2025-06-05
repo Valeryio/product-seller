@@ -118,7 +118,7 @@ const Login = () => {
 		e.preventDefault();
 
 		try {
-			let response = await fetch("http://localhost:8080/users/login", {
+			let response = await fetch(`http://${import.meta.env.VITE_BACKEND_API}/users/login`, {
 				method: "POST",
 				headers: {
 					"content-type": "application/json"
