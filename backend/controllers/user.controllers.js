@@ -145,8 +145,6 @@ const login = async (req, res) => {
 	});
 	res.header("Authorization", `Bearer ${token}`);
 
-	console.log(header["header"]);
-
 
 	// Storing the token into cookie parser
 	res.cookie("token", `Bearer ${token}`, {
