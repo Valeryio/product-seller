@@ -3,7 +3,7 @@
 Product seller is a simple platform to create ecommerce product pages, with a generated link that you can send to receive payments
 
 ## Overview 
-![screenshot]("./overview.png")
+![screenshot]("overview.png")
 
 ## Available functionnalities
 - Login
