@@ -118,7 +118,7 @@ const Login = () => {
 		e.preventDefault();
 
 		try {
-			let response = await fetch(`https://${import.meta.env.VITE_BACKEND_API}:${import.meta.env.VITE_PORT}/users/login`, {
+			let response = await fetch(`https://${import.meta.env.VITE_BACKEND_API}/users/login`, {
 				method: "POST",
 				headers: {
 					"content-type": "application/json"
@@ -138,7 +138,7 @@ const Login = () => {
 
 		} catch (err) {
 
-			console.error(`Error while getting the user : ${err}`);
+			// console.error(`Error while getting the user : ${err}`);
 			return err;
 		}
 	}
