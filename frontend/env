@@ -1,0 +1,3 @@
+
+VITE_PORT="your_specified_port"
+VITE_BACKEND_API="the_backend_api"
