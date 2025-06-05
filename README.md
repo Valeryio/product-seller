@@ -3,7 +3,7 @@
 Product seller is a simple platform to create ecommerce product pages, with a generated link that you can send to receive payments
 
 ## Overview 
-![screenshot]("overview.png")
+![overview.png](./overview.png)
 
 ## Available functionnalities
 - Login
@@ -16,7 +16,7 @@ Product seller is a simple platform to create ecommerce product pages, with a ge
 - MongoDB
 
 ## Local running
-```
+``` bash
 # 1. clone the project
 git clone https://github.com/Valeryio/product-seller/
 cd product-seller
