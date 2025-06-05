@@ -37,6 +37,6 @@ app.use("/products", productRouter);
 
 // start the backend server
 app.listen(process.env.PORT, () => {
-  console.log(`The backend server is listening...`);
+  console.log(`The backend server is listening on ${process.env.PORT}...`);
 });
 
